@@ -74,10 +74,19 @@ module ClientSuccess
     end
 
     def get_details_by_client_external_id_and_email(client_external_id:, email:, connection:)
-      connection
-        .get("/v1/contacts?clientExternalId=#{client_external_id}&email=#{CGI.escape(email)}")
-        .body
-    rescue connection.class::ParsingError
+      params = {
+        "clientExternalId" => client_external_id,
+        "email" => email
+      }
+
+      response = connection.get(
+        "/v1/contacts?#{params.compact.to_query}")
+
+      payload = response.body
+
+      DomainModel::Contact.new(
+        payload.deep_transform_keys(&:underscore))
+    rescue Connection::ParsingError
       nil
     end
 
