@@ -24,4 +24,16 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_runtime_dependency "faraday"
+  spec.add_runtime_dependency "faraday_middleware"
+
+  # TODO: don't force the use of typhoeus
+  spec.add_runtime_dependency "typhoeus"
+
+  spec.add_runtime_dependency "dry-types", "0.11.0"
+  spec.add_runtime_dependency "hashie"
+
+  # TODO: remove activesupport as a dependency
+  spec.add_runtime_dependency "activesupport", "~> 5.2"
 end
