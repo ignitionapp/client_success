@@ -1,0 +1,435 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.clientsuccess.com/v1/clients/90337314/contacts
+    body:
+      encoding: UTF-8
+      string: '{"email":"john.smith@address.com","phone":"00 0000 0000","title":"Junior
+        Accountant","firstName":"John","lastName":"Smith","executiveSponsor":false}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 2693cca7-431b-444e-ae09-79b8bb2dd882
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 18 Dec 2018 07:01:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVfCwMNFmxNQwFUUVFcRyxdHG1OUA0KQlYCEj8XV1UQAAtbER82K2JiGkBKU0wAUgpOCBYEAQZQDlIJWR9TXQUbQ14HAQoHUVMDAgQCBwECA1VASgUDXBFdPw==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":10911497,"uuid":"cnt_45vyy3c6","clientId":90337314,"email":"john.smith@address.com","phone":"00
+        0000 0000","mobile":null,"title":"Junior Accountant","linkedinUrl":null,"firstName":"John","lastName":"Smith","note":null,"executiveSponsor":false,"advocate":false,"champion":false,"starred":false,"street":null,"city":null,"zip":null,"country":null,"timezone":null,"salesforceId":null,"client":"Unnamed
+        Practice","lastEngagement":null,"engagementCount":0,"customFieldValues":[],"preferredName":null,"photoUrl":null,"name":"John
+        Smith","contactState":null}'
+    http_version: 
+  recorded_at: Tue, 18 Dec 2018 07:01:03 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts/search?term=%27john.smith@address.com%27
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - f3ee8f1f-3e3a-47b8-85bd-fdb2910411e8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 02 Jan 2019 03:20:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Cs-User-Id:
+      - '5082'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubdomains, max-age=31536000; includeSubDomains;
+        preload
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - 'object-src ''none''; script-src ''unsafe-inline'' ''unsafe-eval'' ''strict-dynamic''
+        https: http:;'
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUldWBgAGUVATGhE1AwE2QgNWEVlbQFtcC2VOcDF6PktFUgAUAFBvHwcODENQVBIXbRlABwcRAVhAFFIWCAQDH1UXUQVQClVTAwNWSk4JHxIGV1RTCAMDAFIOVVNeBwcFQBQEWVRHV24=
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"clientId":90336962,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":null,"id":10910588,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336968,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910594,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336969,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910596,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336971,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910597,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336972,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910598,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336973,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910599,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336975,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910600,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336976,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910601,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336977,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910602,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336978,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910603,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336979,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910604,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336980,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910605,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336981,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910606,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336983,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910608,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90336984,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10910609,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337299,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10911473,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337300,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10911474,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337301,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10911476,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337302,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10911477,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337562,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10912627,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337587,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10912644,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337591,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10912646,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337593,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10912647,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337594,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10912648,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337595,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10912649,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337596,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10912650,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337597,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10912651,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337822,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913614,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337824,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913617,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337826,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913620,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337827,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913623,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337829,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913632,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337831,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913636,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337832,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913637,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337834,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913640,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337835,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913641,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337836,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10913642,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337841,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913744,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337842,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913746,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337844,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10913752,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337846,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","firstName":"Johnny","title":"Senior Accountant","id":10913754,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337906,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913864,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90337907,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"Junior Accountant","id":10913865,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90338111,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"DELETED","id":10918171,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90338121,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"DELETED","id":10918173,"lastName":"Smith","linkedinUrl":null,"mobile":null},{"clientId":90338125,"email":"john.smith@address.com","phone":"00
+        0000 0000","firstName":"John","title":"DELETED","id":10918184,"lastName":"Smith","linkedinUrl":null,"mobile":null}]'
+    http_version: 
+  recorded_at: Wed, 02 Jan 2019 03:20:26 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=5a08599c-a67e-4949-839d-48ea51145c6d&email=john.smith@address.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - fa421642-0a2d-4d02-b85d-f85c3b5f5290
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Jan 2019 00:03:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVcDBICAUQRGEp/fWAbEUkJTwFNA0xUBw5WUlMJAwhITFMbEwZTXVAFUFdWUVFTVAwBCQ4WHlUEVRJUPA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: 'null'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 00:03:04 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=ab41c97f-b633-47c8-b943-3577fb11a6e9&email=john.smith111@address.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - fa421642-0a2d-4d02-b85d-f85c3b5f5290
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Jan 2019 00:07:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVcDBICAUQRGEp/fWAbEUkJTwFNA0xUBAVYVVMLBgZITFMbEwMEUAJVBwdSAVAJVlxQDl4WHlUEVRJUPA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: 'null'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 00:07:12 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=e1276bcb-9e41-48cb-87e4-01c285fc0652&email=john.smith111@address.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - fa421642-0a2d-4d02-b85d-f85c3b5f5290
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Jan 2019 00:07:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVcDBICAUQRGEp/fWAbEUkJTwFRAU5UGAdTVlMJCwdITFMbE1FRAgcEUFJWVVICBA5bDl0WHlUEVRJUPA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: 'null'
+    http_version: 
+  recorded_at: Thu, 03 Jan 2019 00:07:13 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=6c45cdcb-6045-4beb-925a-43e430349d95&email=john.smith111@address.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - b87a1f58-b39f-4d92-bd07-530c5336a537
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Jan 2019 01:13:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVcDBICAUQRGEp/fWAbEUkJTwFNA0xUBw5TU1YOAgJITFMbEwZfVgFTVltUWgcJUg0HWwgWHlUEVRJUPA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: 'null'
+    http_version: 
+  recorded_at: Wed, 16 Jan 2019 01:13:44 GMT
+recorded_with: VCR 4.0.0

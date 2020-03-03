@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.clientsuccess.com/v1/subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"productId":9224,"isRecurring":true,"amount":100,"quantity":1,"startDate":"2018-12-10","endDate":"2018-12-10","isPotential":false,"autoRenew":true,"clientId":90334223}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 38dc5069-08fe-4bc0-a7e6-59f6286e2f16
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 10 Dec 2018 23:08:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUlVWAAcCVFYTGhE1AwE2QgNWEVlbQFtcC2VOZBNaPktFQgMVAEpaQBAIDVlCa0lGHQYdUkpTTAFaDlYJDAcEH1QPWR1DUgFRBgAEVAEPBFVVBQAGCBVKAlBaQAc7
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"clientAsOfDate":"2018-12-09","potentialAmount":100,"clientId":90334223,"amount":100,"attachmentIds":null,"salesforceProductId":null,"reasonCodesNote":null,"reasonCodes":null,"contractId":null,"csmId":null,"potentialProbability":70,"potentialEndDate":"2018-12-11T00:00:00Z","isRecurring":true,"isPotential":false,"startDate":"2018-12-10","renewedById":null,"potentialStartDate":"2018-12-11T00:00:00Z","productName":"Starter
+        Monthly","productId":9224,"salesforceOpportunityId":null,"clientNoteId":null,"probability":70,"renewedDate":null,"potentialRenewedById":2056707,"statusId":1,"note":null,"salesforceId":null,"endDate":"2018-12-10","potentialQuantity":1,"id":2056708,"noteId":null,"salesforceForecastId":null,"createdDate":"2018-12-10","quantity":1,"terminationDate":null,"potentialNote":null,"autoRenew":true,"clientName":"Client
+        Success Local Rudy Again"}'
+    http_version: 
+  recorded_at: Mon, 10 Dec 2018 23:08:33 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 9ae500ef-e119-466b-8138-e6b54f490db5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 19 Dec 2018 06:41:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":7857,"active":true,"name":"Practice Ignition Sandbox","description":null,"sku":null,"logo":null,"recurring":true,"createdDate":"2018-08-17","salesforceId":null},{"id":9211,"active":true,"name":"Jupiter
+        Annual","description":null,"sku":"2015-jupiter-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9212,"active":true,"name":"Jupiter
+        Monthly","description":null,"sku":"2015-jupiter-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9213,"active":true,"name":"Mars
+        Annual","description":null,"sku":"2015-mars-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9214,"active":true,"name":"Mars
+        Monthly","description":null,"sku":"2015-mars-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9215,"active":true,"name":"Neptune
+        Annual","description":null,"sku":"2015-neptune-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9216,"active":true,"name":"Neptune
+        Monthly","description":null,"sku":"2015-neptune-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9217,"active":true,"name":"Professional
+        Annual","description":null,"sku":"2018-professional-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9218,"active":true,"name":"Professional
+        Monthly","description":null,"sku":"2018-professional-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9219,"active":true,"name":"Saturn
+        Annual","description":null,"sku":"2015-saturn-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9220,"active":true,"name":"Saturn
+        Monthly","description":null,"sku":"2015-saturn-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9221,"active":true,"name":"Scale
+        Annual","description":null,"sku":"2018-scale-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9222,"active":true,"name":"Scale
+        Monthly","description":null,"sku":"2018-scale-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9223,"active":true,"name":"Starter
+        Annual","description":null,"sku":"2018-starter-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9224,"active":true,"name":"Starter
+        Monthly","description":null,"sku":"2018-starter-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null}]'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 06:41:45 GMT
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 9ae500ef-e119-466b-8138-e6b54f490db5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 19 Dec 2018 06:42:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":7857,"active":true,"name":"Practice Ignition Sandbox","description":null,"sku":null,"logo":null,"recurring":true,"createdDate":"2018-08-17","salesforceId":null},{"id":9211,"active":true,"name":"Jupiter
+        Annual","description":null,"sku":"2015-jupiter-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9212,"active":true,"name":"Jupiter
+        Monthly","description":null,"sku":"2015-jupiter-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9213,"active":true,"name":"Mars
+        Annual","description":null,"sku":"2015-mars-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9214,"active":true,"name":"Mars
+        Monthly","description":null,"sku":"2015-mars-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9215,"active":true,"name":"Neptune
+        Annual","description":null,"sku":"2015-neptune-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9216,"active":true,"name":"Neptune
+        Monthly","description":null,"sku":"2015-neptune-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9217,"active":true,"name":"Professional
+        Annual","description":null,"sku":"2018-professional-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9218,"active":true,"name":"Professional
+        Monthly","description":null,"sku":"2018-professional-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9219,"active":true,"name":"Saturn
+        Annual","description":null,"sku":"2015-saturn-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9220,"active":true,"name":"Saturn
+        Monthly","description":null,"sku":"2015-saturn-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9221,"active":true,"name":"Scale
+        Annual","description":null,"sku":"2018-scale-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9222,"active":true,"name":"Scale
+        Monthly","description":null,"sku":"2018-scale-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9223,"active":true,"name":"Starter
+        Annual","description":null,"sku":"2018-starter-annual","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null},{"id":9224,"active":true,"name":"Starter
+        Monthly","description":null,"sku":"2018-starter-monthly","logo":null,"recurring":true,"createdDate":"2018-12-06","salesforceId":null}]'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 06:42:52 GMT
+recorded_with: VCR 4.0.0

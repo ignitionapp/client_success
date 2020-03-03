@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/clients?activeOnly=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - 979e3ce5-5f57-486a-af03-d328f50bd356
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Aug 2018 05:03:49 GMT
+      Server:
+      - restify
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=0, no-store
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":90289610,"name":"Joshuah Wintheiser DVM","successScore":60,"managedByEmployeeId":null,"clientSegmentId":null,"segment":null,"lastTouchDateTime":null,"lastTouchTypeId":null,"lastTouchType":null,"activeClientSuccessCycleId":478852,"externalId":"2474027099"}]'
+    http_version: 
+  recorded_at: Tue, 21 Aug 2018 05:03:49 GMT
+recorded_with: VCR 2.9.3

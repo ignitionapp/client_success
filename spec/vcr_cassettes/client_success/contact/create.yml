@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.clientsuccess.com/v1/clients/90289610/contacts
+    body:
+      encoding: UTF-8
+      string: '{"email":"nolanmurray@klocko.com","phone":"1-829-820-5827 x00329","mobile":"613-024-9844","title":"Chief
+        Strategist","linkedinUrl":"http://linkedin.com/donnell.hyatt","firstName":"Carroll","lastName":"Altenwerth","street":"221
+        Veum Underpass","city":"East Klaramouth","contactState":"Arizona","zip":"53544-1850","country":"Solomon
+        Islands"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - 124f4ab2-c951-4dd2-9519-5546eaa20bc6
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Sep 2018 04:36:11 GMT
+      Server:
+      - restify
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=0, no-store
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":10740139,"uuid":"cnt_av2xquoa","clientId":90289610,"email":"nolanmurray@klocko.com","phone":"1-829-820-5827
+        x00329","mobile":"613-024-9844","title":"Chief Strategist","linkedinUrl":"http://linkedin.com/donnell.hyatt","firstName":"Carroll","lastName":"Altenwerth","note":null,"executiveSponsor":false,"advocate":false,"champion":false,"starred":false,"street":"221
+        Veum Underpass","city":"East Klaramouth","zip":"53544-1850","country":"Solomon
+        Islands","timezone":null,"salesforceId":null,"client":"Joshuah Wintheiser
+        DVM","lastEngagement":null,"engagementCount":0,"customFieldValues":[],"photoUrl":null,"preferredName":null,"name":"Carroll
+        Altenwerth","contactState":"Arizona"}'
+    http_version: 
+  recorded_at: Thu, 20 Sep 2018 04:36:11 GMT
+recorded_with: VCR 4.0.0

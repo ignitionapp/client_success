@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/clients/90289610
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - 979e3ce5-5f57-486a-af03-d328f50bd356
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Aug 2018 05:13:02 GMT
+      Server:
+      - restify
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json
+      Cache-Control:
+      - max-age=0, no-store
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":90289610,"name":"Joshuah Wintheiser DVM","siteUrl":"http://rueckerfahey.org/owen","clientSegmentId":null,"clientSegment":null,"zip":"26722-6994","modifiedByEmployeeId":5082,"statusId":1,"inceptionDate":null,"createdByEmployeeId":5082,"linkedinUrl":"http://linkedin.com/monty","managedByEmployeeId":null,"active":true,"successScore":60,"activeClientSuccessCycleId":478852,"crmCustomerId":null,"note":null,"crmCustomerUrl":null,"zendeskId":"8680534890","deskId":"6647924048","terminatedDate":null,"freshdeskId":"8017149263","uservoiceId":null,"assignedSalesRep":null,"customFieldValues":[],"successCycleId":2361,"salesforceAccountId":null,"jiraId":"1191723404","usageId":"1095676470","keyContactId":null,"street":"8473
+        Ethyl Crossing","state":"North Carolina","country":"Mauritius","city":"Crooksport","timezone":null,"npsScore":null,"externalId":"2474027099","assignedCSM":null}'
+    http_version: 
+  recorded_at: Tue, 21 Aug 2018 05:13:02 GMT
+recorded_with: VCR 2.9.3

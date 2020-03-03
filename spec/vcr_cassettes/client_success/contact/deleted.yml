@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.clientsuccess.com/v1/clients/90337314/contacts/10911497
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 05c7a20c-c3d5-4e2e-9103-bed1ccad508b
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Dec 2018 06:21:19 GMT
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVfCwMNFmxNQwFUUVFcRyxdHG1OUA0KQlYCEj8XSFMLDxZWUkMvAEwWGyYjLydkJxFAFAgaAgNXFVEfUQBTUwQBU1dWFAMcRldWDwNUX1cEUlcAX1JTBFAaTl5ZWEFWOA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 20 Dec 2018 06:21:16 GMT
+recorded_with: VCR 4.0.0

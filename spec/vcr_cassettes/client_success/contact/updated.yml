@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.clientsuccess.com/v1/clients/90337314/contacts/10911497/details
+    body:
+      encoding: UTF-8
+      string: '{"email":"johnny.smith@address.com","phone":"00 9999 9999","title":"Senior
+        Accountant","firstName":"Johnny","lastName":"Smith"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 9ae500ef-e119-466b-8138-e6b54f490db5
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 19 Dec 2018 02:39:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVfCwMNFmxNQwFUUVFcRyxdHG1OUA0KQlYCEj8XSFMLDxZWUkMvAExqHAYDFwNZDhhKaG1gGxFJCU8BTQNMVAUEWVBaCgIcVVdXGxNVBwcGUgtQV1NUAAcLUQpcFh5VBFUSVDw=
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":10911497,"uuid":null,"clientId":90337314,"email":"johnny.smith@address.com","phone":"00
+        9999 9999","mobile":null,"title":"Senior Accountant","linkedinUrl":null,"firstName":"Johnny","lastName":"Smith","note":null,"executiveSponsor":false,"advocate":false,"champion":false,"starred":false,"street":null,"city":null,"zip":null,"country":null,"timezone":null,"salesforceId":null,"client":"Unnamed
+        Practice","lastEngagement":null,"engagementCount":0,"customFieldValues":[],"photoUrl":null,"preferredName":null,"name":"Johnny
+        Smith","contactState":null}'
+    http_version: 
+  recorded_at: Wed, 19 Dec 2018 02:39:50 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/client-segments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Authorization:
+      - 319441a6-38b0-47ed-9f85-90566d38e98e
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Wed, 26 Feb 2020 23:11:49 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      x-frame-options:
+      - DENY
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS, PATCH
+      access-control-max-age:
+      - '1800'
+      x-application-context:
+      - application
+      x-cs-tenant-id:
+      - '328'
+      x-cs-user-id:
+      - '3955'
+      x-newrelic-app-data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HkVWBQsGDEQRGEp/fWAbEUkJTwFRAk5UGAdTU1cACgVSUE4aABtEAgFVUgNfUlUGBFxWAABQBRFJXwBdElY/
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      access-control-allow-origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":4974,"tid":328,"title":"Active - High CMI","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4972,"tid":328,"title":"Active
+        - Key Account","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4973,"tid":328,"title":"Active
+        - Low CMI","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4783,"tid":328,"title":"Churned","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4784,"tid":328,"title":"Dormant","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":5161,"tid":328,"title":"Expired
+        Trial","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4782,"tid":328,"title":"Onboarding","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]},{"id":4781,"tid":328,"title":"Trial","description":null,"defaultSuccessCycleMapId":null,"successCycles":[]}]'
+    http_version: 
+  recorded_at: Wed, 26 Feb 2020 23:11:49 GMT
+recorded_with: VCR 5.0.0

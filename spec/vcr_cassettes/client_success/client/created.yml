@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.clientsuccess.com/v1/clients
+    body:
+      encoding: UTF-8
+      string: '{"name":"Unnamed Practice","statusId":3,"externalId":"5a08599c-a67e-4949-839d-48ea51145c6d"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 2693cca7-431b-444e-ae09-79b8bb2dd882
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 18 Dec 2018 07:00:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*, *"
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1800'
+      X-Application-Context:
+      - application
+      X-Cs-Tenant-Id:
+      - '405'
+      X-Cs-User-Id:
+      - '5082'
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVfCwMNFhBKaC1rbB0QH1UXUR1RHVJRDgBXUlcUBQBIQwdWUwNeBgADAlFSUVMDBAxAFF5VXkAAZA==
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":90337314,"uuid":"cln_qfhfeb05","name":"Unnamed Practice","siteUrl":null,"clientSegmentId":null,"clientSegment":null,"zip":null,"modifiedByEmployeeId":5082,"statusId":3,"inceptionDate":null,"createdByEmployeeId":5082,"linkedinUrl":null,"managedByEmployeeId":null,"active":true,"successScore":60,"activeClientSuccessCycleId":null,"crmCustomerId":null,"note":null,"crmCustomerUrl":null,"zendeskId":null,"deskId":null,"terminatedDate":null,"freshdeskId":null,"uservoiceId":null,"assignedSalesRep":null,"customFieldValues":[null,null],"successCycleId":2361,"salesforceAccountId":null,"jiraId":null,"usageId":null,"keyContactId":null,"street":null,"state":null,"country":null,"city":null,"timezone":null,"npsScore":null,"externalId":"1111","assignedCSM":null}'
+    http_version: 
+  recorded_at: Tue, 18 Dec 2018 07:00:55 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.clientsuccess.com/v1/subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"productId":0,"isRecurring":true,"amount":100,"quantity":1,"startDate":"2018-12-10","endDate":"2018-12-10","isPotential":false,"autoRenew":true,"clientId":0}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - 38dc5069-08fe-4bc0-a7e6-59f6286e2f16
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 10 Dec 2018 23:15:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Newrelic-App-Data:
+      - PxQBVlVTCwcTUlVWAAcCVFYTGhE1AwE2QgNWEVlbQFtcC2VOZBNaPktFQgMVAEpaQBAIDVlCa0lGHQYdUkpTTABWAVcBAAYDH1QMWR1DVgBQDgNSX1MPV1ZSVlJRCRVKAlBaQAc7
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      - max-age=31536000; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: 'null'
+    http_version: 
+  recorded_at: Mon, 10 Dec 2018 23:15:49 GMT
+recorded_with: VCR 4.0.0
