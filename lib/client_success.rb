@@ -1,0 +1,16 @@
+require "active_support"
+require "active_support/core_ext"
+
+require "hashie"
+
+require_relative "client_success/access_token"
+require_relative "client_success/client"
+require_relative "client_success/client_type"
+require_relative "client_success/connection"
+require_relative "client_success/contact"
+require_relative "client_success/employee"
+require_relative "client_success/product"
+require_relative "client_success/status"
+require_relative "client_success/subscription"
+require_relative "client_success/to_do"
+require_relative "client_success/types"
