@@ -1,35 +1,52 @@
-# ClientSuccess
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/client_success`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# Ruby Wrapper for the [ClientSuccess Open API](https://clientsuccessapi.docs.apiary.io/)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'client_success'
+gem "client_success"
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install client_success
 
 ## Usage
 
-TODO: Write usage instructions here
+In order to make requests against the ClientSuccess Open API you'll first need to use your existing credentials (username and password) to create an Access Token:
+
+```ruby
+response = ClientSuccess::AccessToken::Create(
+  username: "test@example.com",
+  password: "Password123"
+)
+
+puts response["access_token"]
+=> "979e3ce5-5f57-486a-af03-d328f50bd356"
+```
+
+If the supplied credentials could not be authenticated a `ClientSuccess::AccessToken::InvalidCredentials` exception will be raised. Note that Access Tokens are valid for 12 hours, after which a new one must be created.
+
+Once you have successfully created an Access Token you can initialise a connection object and make authenticated requests:
+
+```ruby
+cs = ClientSuccess::Connection.authorised(
+  response["access_token"]
+)
+
+# get a list of all clients
+clients = ClientSuccess::Client.list_all(connection: cs)
+```
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/client_success.
+Bug reports and pull requests are welcome on GitHub at https://github.comignitionapp/client_success.
