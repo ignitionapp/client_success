@@ -126,7 +126,7 @@ module ClientSuccess
 
       context "when payload is nil" do
         it "returns nil" do
-          expect(connection).to receive(:get).and_return(nil)
+          expect(connection).to receive(:get).and_return(Faraday::Response.new())
           contact = service.get_details_by_client_external_id_and_email(
             client_external_id: client_external_id,
             email: email,

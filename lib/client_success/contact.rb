@@ -82,7 +82,7 @@ module ClientSuccess
       response = connection.get(
         "/v1/contacts?#{params.compact.to_query}")
 
-      if response && response.body
+      if response.body
         payload = response.body
         DomainModel::Contact.new(payload.deep_transform_keys(&:underscore))
       end
