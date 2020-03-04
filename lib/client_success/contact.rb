@@ -82,10 +82,10 @@ module ClientSuccess
       response = connection.get(
         "/v1/contacts?#{params.compact.to_query}")
 
-      payload = response.body
-
-      DomainModel::Contact.new(
-        payload.deep_transform_keys(&:underscore))
+      if response && response.body
+        payload = response.body
+        DomainModel::Contact.new(payload.deep_transform_keys(&:underscore))
+      end
     rescue Connection::ParsingError
       nil
     end
