@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=5372a2ad-7e14-4ea4-a20a-c7a717f9a845&email=skuunk%2Bclien%40gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Authorization:
+      - 4ceb5a35-c4aa-48c2-9a10-dc0156f83281
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 03 Mar 2020 01:07:46 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      x-frame-options:
+      - DENY
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS, PATCH
+      access-control-max-age:
+      - '1800'
+      x-application-context:
+      - application
+      x-cs-tenant-id:
+      - '405'
+      x-cs-user-id:
+      - '5082'
+      x-newrelic-app-data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYyQRNaDAN1WA8SEVdfXAETPhhQRw84HlVcDBICAUQRGEp/fWAbEUkJTwFNA0xUBQdWV1QJAANITFMbEwIEBlUPC1dfAgEGWgFRDAAWHlUEVRJUPA==
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+      access-control-allow-origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":12182818,"uuid":"cnt_pzda6yfp","clientId":90764325,"statusId":1,"email":"skuunk+clien@gmail.com","phone":null,"mobile":null,"title":null,"linkedinUrl":null,"firstName":"Jimmy","lastName":"Neutron","note":null,"executiveSponsor":true,"advocate":false,"champion":false,"starred":false,"keyContact":false,"street":null,"city":null,"zip":null,"country":null,"timezone":null,"salesforceId":null,"externalId":null,"client":"LOOKFORMETONY","lastEngagement":null,"engagementCount":0,"usageId":null,"customFieldValues":[],"name":"Jimmy
+        Neutron","preferredName":null,"photoUrl":null,"contactState":null}'
+    http_version:
+  recorded_at: Tue, 03 Mar 2020 01:07:46 GMT
+recorded_with: VCR 5.0.0
