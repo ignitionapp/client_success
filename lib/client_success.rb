@@ -1,6 +1,5 @@
-require "active_support/core_ext/string/inflections"
-require "active_support/core_ext/hash/keys"
-require "active_support/core_ext/object/to_query"
+require "active_support"
+require "active_support/core_ext"
 
 require "hashie"
 
