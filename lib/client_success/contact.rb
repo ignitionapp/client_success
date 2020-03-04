@@ -6,6 +6,9 @@ module ClientSuccess
   module Contact
     extend self
 
+    class Error < StandardError; end
+    class NotFound < Error; end
+
     def list_all(client_id:, connection:)
       response = connection.get(
         "/v1/clients/#{client_id}/contacts")
@@ -82,12 +85,16 @@ module ClientSuccess
       response = connection.get(
         "/v1/contacts?#{params.compact.to_query}")
 
-      if response && response.body
+      # for some reason the ClientSuccess API does not return a 404
+      # but instead a body containing the string "null" if the contact is not found
+      # this is probably a security restriction on their end, but we will instead raise an error
+
+      if response.body.blank?
+        raise NotFound, "contact with email '#{email}' not found on client '#{client_external_id}'"
+      else
         payload = response.body
         DomainModel::Contact.new(payload.deep_transform_keys(&:underscore))
       end
-    rescue Connection::ParsingError
-      nil
     end
 
     def search(term:, connection:)

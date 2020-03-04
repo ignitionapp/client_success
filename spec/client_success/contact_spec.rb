@@ -80,7 +80,7 @@ module ClientSuccess
         end
       end
 
-      context "when it gets the results" do
+      context "when the contact is found" do
         it "gets the details" do
           contact = service.get_details_by_client_external_id_and_email(
             client_external_id: client_external_id,
@@ -124,17 +124,17 @@ module ClientSuccess
         end
       end
 
-      context "when payload is nil" do
-        it "returns nil" do
-          expect(connection).to receive(:get).and_return(nil)
-          contact = service.get_details_by_client_external_id_and_email(
-            client_external_id: client_external_id,
-            email: email,
-            connection: connection)
-          expect(contact).to be_nil
+      context "when contact is not found" do
+        it "raises a not found error" do
+          expect(connection).to receive(:get).and_return(Faraday::Response.new)
+          expect do
+            contact = service.get_details_by_client_external_id_and_email(
+              client_external_id: client_external_id,
+              email: email,
+              connection: connection)
+          end.to raise_error(ClientSuccess::Contact::NotFound)
         end
       end
-
     end
   end
 end
