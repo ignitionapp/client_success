@@ -76,7 +76,7 @@ module ClientSuccess
     #       supply everything :)
     def update(client_id:, attributes:, connection:)
       body = attributes
-        .transform_keys { |k| k.to_s.camelize(:lower) }
+        .deep_transform_keys { |k| k.to_s.camelize(:lower) }
         .to_json
 
       response = connection.put(

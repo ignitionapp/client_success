@@ -163,5 +163,17 @@ module ClientSuccess
           "assigned_csm"                   => nil)
       end
     end
+
+    describe "#update" do
+      let(:client_id) { "123" }
+      let(:attributes) { { first_name: "Tony", custom_field_values: [{ active_client_success_cycle_id: 1 }] } }
+      let(:response) { Faraday::Response.new() }
+
+      it "does a deep transform on the attributes" do
+        expect(connection).to receive(:put).with("/v1/clients/#{client_id}", "{\"firstName\":\"Tony\",\"customFieldValues\":[{\"activeClientSuccessCycleId\":1}]}").and_return(response)
+        allow(response).to receive(:body).and_return({"customFieldValues" => []})
+        service.update(client_id: client_id, attributes: attributes, connection: connection)
+      end
+    end
   end
 end
