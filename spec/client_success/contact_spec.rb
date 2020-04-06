@@ -128,7 +128,7 @@ module ClientSuccess
         it "raises a not found error" do
           expect(connection).to receive(:get).and_return(Faraday::Response.new)
           expect do
-            contact = service.get_details_by_client_external_id_and_email(
+            service.get_details_by_client_external_id_and_email(
               client_external_id: client_external_id,
               email: email,
               connection: connection)
