@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dev@practiceignition.com"]
 
   spec.summary       = "An unofficial Ruby wrapper for Client Success's REST API"
-  spec.homepage      = "https://github.com/ignitionapp/"
+  spec.homepage      = "https://github.com/ignitionapp/client_success"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
