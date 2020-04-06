@@ -46,6 +46,10 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`.
 
+## Publishing
+
+This repository is set up to auto publish to https://rubygems.org/gems/client_success on merge into master.
+
 
 ## Contributing
 
