@@ -35,9 +35,7 @@ module ClientSuccess
         end
       end
 
-      # This spec relied on JSON.parse blowing up when parsing "null", but
-      # it works with the newer parser.
-      xit "raises an error with invalid attributes" do
+      it "raises an error with invalid attributes" do
         attributes[:client_id] = 0
         attributes[:product_id] = 0
 
@@ -46,7 +44,7 @@ module ClientSuccess
             Subscription.create(
               attributes: attributes,
               connection: connection)
-          end.to raise_error(ClientSuccess::Connection::ParsingError)
+          end.to raise_error(ClientSuccess::Subscription::InvalidAttributes)
         end
       end
     end

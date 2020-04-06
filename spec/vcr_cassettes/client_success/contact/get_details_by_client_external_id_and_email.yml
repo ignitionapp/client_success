@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=5372a2ad-7e14-4ea4-a20a-c7a717f9a845&email=skuunk%2Bclien%40gmail.com
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=5372a2ad-7e14-4ea4-a20a-c7a717f9a845&email=test%40test.com
     body:
       encoding: US-ASCII
       string: ''
@@ -57,8 +57,58 @@ http_interactions:
       - "*"
     body:
       encoding: ASCII-8BIT
-      string: '{"id":12182818,"uuid":"cnt_pzda6yfp","clientId":90764325,"statusId":1,"email":"skuunk+clien@gmail.com","phone":null,"mobile":null,"title":null,"linkedinUrl":null,"firstName":"Jimmy","lastName":"Neutron","note":null,"executiveSponsor":true,"advocate":false,"champion":false,"starred":false,"keyContact":false,"street":null,"city":null,"zip":null,"country":null,"timezone":null,"salesforceId":null,"externalId":null,"client":"LOOKFORMETONY","lastEngagement":null,"engagementCount":0,"usageId":null,"customFieldValues":[],"name":"Jimmy
+      string: '{"id":12182818,"uuid":"cnt_pzda6yfp","clientId":90764325,"statusId":1,"email":"test@test.com","phone":null,"mobile":null,"title":null,"linkedinUrl":null,"firstName":"Jimmy","lastName":"Neutron","note":null,"executiveSponsor":true,"advocate":false,"champion":false,"starred":false,"keyContact":false,"street":null,"city":null,"zip":null,"country":null,"timezone":null,"salesforceId":null,"externalId":null,"client":"TEST_CLIENT","lastEngagement":null,"engagementCount":0,"usageId":null,"customFieldValues":[],"name":"Jimmy
         Neutron","preferredName":null,"photoUrl":null,"contactState":null}'
-    http_version:
+    http_version: null
   recorded_at: Tue, 03 Mar 2020 01:07:46 GMT
-recorded_with: VCR 5.0.0
+- request:
+    method: get
+    uri: https://api.clientsuccess.com/v1/contacts?clientExternalId=5372a2ad-7e14-4ea4-a20a-c7a717f9a845&email=test%40test.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Authorization:
+      - 124f4ab2-c951-4dd2-9519-5546eaa20bc6
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      server:
+      - nginx
+      date:
+      - Mon, 06 Apr 2020 01:39:06 GMT
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate, no-store
+      pragma:
+      - no-cache, no-cache
+      expires:
+      - '0'
+      x-frame-options:
+      - DENY
+      www-authenticate:
+      - Bearer realm="clientsuccess", error="invalid_token", error_description="124f4ab2-c951-4dd2-9519-5546eaa20bc6"
+      x-newrelic-app-data:
+      - PxQBVlVTCwcTUllaAggPUUYdFGQHBDcQUQxLA1tMXV1dORYnWA1HBxZqGAwDF0paUxcnC1tFUhRGHQYdUlZSTgBMCFIACAABBlIVTABNEVdVAlEFBAcOBQYFWVdUCQNESFdXXxEDPg==
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains;
+        preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"invalid_token","error_description":"124f4ab2-c951-4dd2-9519-5546eaa20bc6"}'
+    http_version: null
+  recorded_at: Mon, 06 Apr 2020 01:39:06 GMT
+recorded_with: VCR 5.1.0

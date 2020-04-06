@@ -6,6 +6,9 @@ module ClientSuccess
   module Subscription
     extend self
 
+    class Error < StandardError; end
+    class InvalidAttributes < Error; end
+
     def create(attributes:, connection:)
       body = Schema::Subscription::Create[attributes]
         .deep_transform_keys { |k| k.to_s.camelize(:lower) }
@@ -14,10 +17,14 @@ module ClientSuccess
       response = connection.post(
         "/v1/subscriptions", body)
 
-      payload = response.body
 
-      DomainModel::Subscription.new(
-        payload.deep_transform_keys(&:underscore))
+      if response.body.blank?
+        raise InvalidAttributes, "subscription has invalid attributes"
+      else
+        payload = response.body
+        DomainModel::Subscription.new(
+          payload.deep_transform_keys(&:underscore))
+      end
     end
 
     def update(attributes:, connection:)

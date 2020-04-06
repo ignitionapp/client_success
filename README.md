@@ -49,4 +49,4 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.comignitionapp/client_success.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ignitionapp/client_success.
