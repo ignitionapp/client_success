@@ -72,7 +72,7 @@ module ClientSuccess
 
     describe "#get_details_by_client_external_id_and_email" do
       let(:client_external_id) { "5372a2ad-7e14-4ea4-a20a-c7a717f9a845" }
-      let(:email) { "skuunk+clien@gmail.com" }
+      let(:email) { "test@test.com" }
 
       around(:each) do |example|
         VCR.use_cassette("client_success/contact/get_details_by_client_external_id_and_email") do
@@ -92,7 +92,7 @@ module ClientSuccess
             "uuid" => "cnt_pzda6yfp",
             "client_id" => 90764325,
             "status_id" => 1,
-            "email" => "skuunk+clien@gmail.com",
+            "email" => "test@test.com",
             "phone" => nil,
             "mobile" => nil,
             "title" => nil,
