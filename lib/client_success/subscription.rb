@@ -17,7 +17,6 @@ module ClientSuccess
       response = connection.post(
         "/v1/subscriptions", body)
 
-
       if response.body.blank?
         raise InvalidAttributes, "subscription has invalid attributes"
       else
