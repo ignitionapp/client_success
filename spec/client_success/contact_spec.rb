@@ -112,7 +112,7 @@ module ClientSuccess
             "timezone" => nil,
             "salesforce_id" => nil,
             "external_id" => nil,
-            "client" => "LOOKFORMETONY",
+            "client" => "TEST_CLIENT",
             "last_engagement" => nil,
             "engagement_count" => 0,
             "usage_id" => nil,
