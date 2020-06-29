@@ -10,7 +10,6 @@ module ClientSuccess
     class NotFound < Error; end
 
     class ParsingError < Error; end
-    class ConnectionError < Error; end
 
     class << self
       def authorised(access_token)
@@ -93,8 +92,6 @@ module ClientSuccess
       else
         raise Error, error
       end
-    rescue Faraday::ConnectionFailed => error
-      raise ConnectionError, error
     rescue SignalException => error
       raise Error, error
     end
