@@ -56,7 +56,8 @@ module ClientSuccess
     end
 
     def update(id:, client_id:, attributes:, connection:)
-      attributes = connection.strip_emojis(attributes)
+      # for some reason this is breaking client success. Not sure why yet...
+      # attributes = connection.strip_emojis(attributes)
 
       body = Schema::Contact::Update[attributes]
         .transform_keys { |k| k.to_s.camelize(:lower) }

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    client_success (0.1.8)
+    client_success (0.1.9)
       activesupport (~> 5.2)
       dry-types (= 0.11.0)
       faraday
