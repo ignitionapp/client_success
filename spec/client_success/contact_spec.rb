@@ -68,6 +68,49 @@ module ClientSuccess
           "name"                => "Carroll Altenwerth",
           "contact_state"       => "Arizona")
       end
+
+      context "with an emojis in the contact data" do
+        let(:client_id) { 90289610 }
+        let(:attributes) do
+          {
+            client_id:                            client_id,
+            first_name:                           "💥Tony",
+            last_name:                            "💥Smith",
+            email:                                "💥test@test.com💥"
+          }
+        end
+        let(:response) { Faraday::Response.new }
+
+        it "strips the emoji from the client name" do
+          expect(connection).to receive(:post).with("/v1/clients/90289610/contacts", "{\"email\":\"test@test.com\",\"firstName\":\"Tony\",\"lastName\":\"Smith\"}").and_return(response)
+          allow(response).to receive(:body).and_return("customFieldValues" => [])
+
+          service.create(client_id: client_id, attributes: attributes, connection: connection)
+        end
+      end
+    end
+
+    describe "#update" do
+      let(:contact_id) { "456" }
+      let(:client_id) { "123" }
+      let(:attributes) { { first_name: "Tony" } }
+      let(:response) { Faraday::Response.new }
+
+      it "does a deep transform on the attributes" do
+        expect(connection).to receive(:put).with("/v1/clients/#{client_id}/contacts/#{contact_id}/details", "{\"firstName\":\"Tony\"}").and_return(response)
+        allow(response).to receive(:body).and_return("customFieldValues" => [])
+        service.update(id: contact_id, client_id: client_id, attributes: attributes, connection: connection)
+      end
+
+      context "with an emoji in the client name" do
+        let(:attributes) { { first_name: "💥Tony", custom_field_values: [{ active_client_success_cycle_id: 1 }] } }
+
+        it "strips the emoji from the attributes" do
+          expect(connection).to receive(:put).with("/v1/clients/#{client_id}/contacts/#{contact_id}/details", "{\"firstName\":\"Tony\"}").and_return(response)
+          allow(response).to receive(:body).and_return("customFieldValues" => [])
+          service.update(id: contact_id, client_id: client_id, attributes: attributes, connection: connection)
+        end
+      end
     end
 
     describe "#get_details_by_client_external_id_and_email" do
