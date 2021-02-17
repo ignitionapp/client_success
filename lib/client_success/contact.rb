@@ -40,7 +40,7 @@ module ClientSuccess
     end
 
     def create(client_id:, attributes:, connection:)
-      attributes = connection.strip_emojis(attributes)
+      # attributes = connection.strip_emojis(attributes)
 
       body = Schema::Contact::Create[attributes]
         .transform_keys { |k| k.to_s.camelize(:lower) }

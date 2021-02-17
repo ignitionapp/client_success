@@ -69,7 +69,7 @@ module ClientSuccess
           "contact_state"       => "Arizona")
       end
 
-      context "with an emojis in the contact data" do
+      xcontext "with an emojis in the contact data" do
         let(:client_id) { 90289610 }
         let(:attributes) do
           {
