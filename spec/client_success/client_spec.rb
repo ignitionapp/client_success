@@ -162,25 +162,6 @@ module ClientSuccess
           "external_id"                    => "2474027099",
           "assigned_csm"                   => nil)
       end
-
-      context "with an emoji in the client name" do
-        let(:external_id) { "2474027099" }
-        let(:attributes) do
-          {
-            name:                           "💥Tony",
-            status_id:                      ::ClientSuccess::Status::TRIAL,
-            external_id:                    external_id
-          }
-        end
-        let(:response) { Faraday::Response.new }
-
-        it "strips the emoji from the client name" do
-          expect(connection).to receive(:post).with("/v1/clients", "{\"name\":\"Tony\",\"statusId\":#{::ClientSuccess::Status::TRIAL},\"externalId\":\"#{external_id}\"}").and_return(response)
-          allow(response).to receive(:body).and_return("customFieldValues" => [])
-
-          service.create(attributes: attributes, connection: connection)
-        end
-      end
     end
 
     describe "#update" do
@@ -192,16 +173,6 @@ module ClientSuccess
         expect(connection).to receive(:put).with("/v1/clients/#{client_id}", "{\"firstName\":\"Tony\",\"customFieldValues\":[{\"activeClientSuccessCycleId\":1}]}").and_return(response)
         allow(response).to receive(:body).and_return("customFieldValues" => [])
         service.update(client_id: client_id, attributes: attributes, connection: connection)
-      end
-
-      context "with an emoji in the client name" do
-        let(:attributes) { { first_name: "💥Tony", custom_field_values: [{ active_client_success_cycle_id: 1 }] } }
-
-        it "strips the emoji from the attributes" do
-          expect(connection).to receive(:put).with("/v1/clients/#{client_id}", "{\"firstName\":\"Tony\",\"customFieldValues\":[{\"activeClientSuccessCycleId\":1}]}").and_return(response)
-          allow(response).to receive(:body).and_return("customFieldValues" => [])
-          service.update(client_id: client_id, attributes: attributes, connection: connection)
-        end
       end
     end
   end

@@ -55,8 +55,6 @@ module ClientSuccess
     end
 
     def create(attributes:, connection:)
-      attributes = connection.strip_emojis(attributes)
-
       body = Schema::Client::Create[attributes]
         .transform_keys { |k| k.to_s.camelize(:lower) }
         .to_json
@@ -77,8 +75,6 @@ module ClientSuccess
     #       i.e. any fields not supplied will be set to null - so make sure you
     #       supply everything :)
     def update(client_id:, attributes:, connection:)
-      attributes = connection.strip_emojis(attributes)
-
       body = attributes
         .deep_transform_keys { |k| k.to_s.camelize(:lower) }
         .to_json
